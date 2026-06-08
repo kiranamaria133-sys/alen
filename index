@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Yoel 🌸</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="flower-wrapper">
+        <img src="flower.png" class="flower" alt="flower">
+    </div>
+
+    <div class="text">
+        <h2>reward karena udah berusaha</h2>
+        <h2>belajar waktu ujian</h2>
+        <p>- lena</p>
+    </div>
+
+</div>
+
+<div class="petals"></div>
+
+</body>
+</html>
