@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Flower</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+background:linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+overflow:hidden;
+font-family:'Quicksand',sans-serif;
+}
+
+/* Batang */
+.stem{
+position:absolute;
+bottom:140px;
+width:8px;
+height:0;
+background:#76b876;
+border-radius:20px;
+animation:growStem 2s ease forwards;
+}
+
+/* Bunga */
+.flower{
+position:relative;
+width:320px;
+height:320px;
+transform:scale(0);
+animation:appear .5s ease forwards 1.8s;
+}
+
+.petal{
+position:absolute;
+width:120px;
+height:150px;
+border-radius:60% 60% 50% 50%;
+left:50%;
+top:50%;
+transform-origin:bottom center;
+opacity:0;
+}
+
+.pink{
+background:linear-gradient(
+to bottom,
+#ffe1ef,
+#ff99c8
+);
+}
+
+.blue{
+background:linear-gradient(
+to bottom,
+#e6f2ff,
+#8cbcff
+);
+}
+
+.red{
+background:linear-gradient(
+to bottom,
+#ffcccc,
+#ff6b6b
+);
+}
+
+.yellow{
+background:linear-gradient(
+to bottom,
+#fff4cc,
+#ffcc00
+);
+}
+
+.p1{
+transform:translate(-50%,-90%) rotate(0deg) scale(0);
+animation:bloom .8s forwards 2s;
+}
+
+.p2{
+transform:translate(-90%,-40%) rotate(-72deg) scale(0);
+animation:bloom .8s forwards 2.2s;
+}
+
+.p3{
+transform:translate(-10%,-40%) rotate(72deg) scale(0);
+animation:bloom .8s forwards 2.4s;
+}
+
+.p4{
+transform:translate(-75%,20%) rotate(-144deg) scale(0);
+animation:bloom .8s forwards 2.6s;
+}
+
+.p5{
+transform:translate(-25%,20%) rotate(144deg) scale(0);
+animation:bloom .8s forwards 2.8s;
+}
+
+.center{
+position:absolute;
+width:85px;
+height:85px;
+border-radius:50%;
+background:#ffd5e8;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%) scale(0);
+animation:centerBloom .8s forwards 3s;
+box-shadow:0 0 25px #ffd5e8;
+}
+
+/* Sparkles */
+.sparkle{
+position:absolute;
+font-size:20px;
+opacity:0;
+animation:sparkle 3s infinite;
+}
+
+.s1{top:20%;left:20%;}
+.s2{top:15%;right:25%;}
+.s3{bottom:30%;left:25%;}
+.s4{bottom:25%;right:20%;}
+
+/* Text */
+.text{
+margin-top:350px;
+text-align:center;
+opacity:0;
+animation:fadeIn 2s forwards 3.5s;
+color:white;
+}
+
+.text h2{
+font-size:28px;
+color:#fff;
+}
+
+.text p{
+font-size:20px;
+margin-top:8px;
+color:#e0e0e0;
+}
+
+.sign{
+margin-top:15px;
+font-size:24px;
+color:#ffcc00;
+font-style:italic;
+}
+
+/* Animations */
+@keyframes growStem{
+to{
+height:240px;
+}
+}
+
+@keyframes appear{
+to{
+transform:scale(1);
+}
+}
+
+@keyframes bloom{
+to{
+opacity:1;
+}
+}
+
+@keyframes centerBloom{
+to{
+transform:translate(-50%,-50%) scale(1);
+}
+}
+
+@keyframes fadeIn{
+to{
+opacity:1;
+}
+}
+
+@keyframes sparkle{
+0%,100%{
+opacity:0;
+transform:translateY(0);
+}
+50%{
+opacity:1;
+transform:translateY(-15px);
+}
+}
+</style>
+</head>
+<body>
+
+<div class="sparkle s1">✨</div>
+<div class="sparkle s2">💙</div>
+<div class="sparkle s3">✨</div>
+<div class="sparkle s4">💖</div>
+
+<div class="stem"></div>
+
+<div class="flower">
+<div class="petal pink p1"></div>
+<div class="petal blue p2"></div>
+<div class="petal pink p3"></div>
+<div class="petal blue p4"></div>
+<div class="petal pink p5"></div>
+<div class="center"></div>
+</div>
+
+<div class="text">
+<h2>Selamat! 🌸</h2>
+<p>Animasi bunga yang indah untuk Anda</p>
+<div class="sign">~ Alen</div>
+</div>
+
+</body>
+</html>
